@@ -32,7 +32,7 @@ export const site = {
   name: "E.D.E Studio",
   shortName: "E.D.E",
   tagline: "Handbags, handmade.",
-  location: "Studio",
+  location: "New York",
   email: "studio@edestudio.com",
   instagram: {
     handle: "@edestudio",
@@ -40,10 +40,45 @@ export const site = {
   },
   about: {
     heading: "About",
-    portrait: "/images/studio-portrait.jpg",
-    body: [
-      "E.D.E Studio is a practice of handmade handbags and related forms. Each piece is considered as an object first — a surface, a weight, a presence — shaped slowly and in small numbers.",
-      "The work extends into painting and mixed media on linen. Pigment, leather, and cloth share a quiet language of ochre, bone, and charcoal. Nothing is made to shout. Everything is made to be held, worn, or lived with.",
+    lead: [
+      "A bag should be functional; it serves a purpose, yet taken to a higher level a bag can become a piece of art. At EDE we strive to bridge the gap between function and fashion.",
+      "Gaining our inspirations from nature as well as our own dreams and visions, we create bags completely by hand. There are many steps involved in the birth of each bag. The first involves creating a strong sculptural form. Next, we choose each skin of leather individually to fulfill the need of the body we have designed. After that, anything is possible; visions become reality. Using handmade metal handles sprinkled with Swarovski rhinestones and pearls, antique clasps and vintage buckles, our bags have a timeless quality distinguishing them from all others. However, the most unique aspect of EDE is the incredible technique we have developed for painting leather. This element takes our bags to the highest level of design.",
+    ],
+    story:
+      "Ellen Eichel received her M.F.A. from Pratt Institute in 1991. Her main source of inspiration came from watching her mother, a designer in her own right. Dianne Eichel, her daughter-in-law, received her B.A. that same year from the University of Rochester. They started designing together upon their second meeting. Their first professional collaboration several years later was designing hand painted silk velvet evening gowns for Saks Fifth Ave. While creating these gowns, they were inspired to design handbags. Eventually they both agreed that handbag design was the ultimate creative experience, and decided to devote themselves to this completely. They began selling their bags through private trunk shows, with great success. Ellen and Dianne were so excited when Columbia Productions chose E.D.E. handbags as wrap gifts for the lead actors in Charlie's Angels, Cameron Diaz, Lucy Liu, and Drew Barrymore. Today many other celebrity names have been added to their client list.",
+    close:
+      "A handbag shouldn't just be functional, it should bring pleasure, for it is an extension of you; your personal statement. Your bag should compliment your mood, your personality. Life is constantly changing and evolving and we strive to emulate that energy. At EDE it's simple, we love making bags and it shows.",
+    photos: [
+      {
+        src: "/images/vessel-tote.jpg",
+        alt: "Vessel tote in vegetable-tanned leather",
+        aspect: "portrait" as const,
+      },
+      {
+        src: "/images/fold-clutch.jpg",
+        alt: "Fold clutch in bone leather",
+        aspect: "landscape" as const,
+      },
+      {
+        src: "/images/studio-shopper.jpg",
+        alt: "Studio shopper in canvas and ochre leather",
+        aspect: "portrait" as const,
+      },
+      {
+        src: "/images/arc-shoulder.jpg",
+        alt: "Arc shoulder bag in charcoal-brown leather",
+        aspect: "portrait" as const,
+      },
+      {
+        src: "/images/vessel-tote-detail.jpg",
+        alt: "Detail of vegetable-tanned leather and stitch",
+        aspect: "landscape" as const,
+      },
+      {
+        src: "/images/fold-clutch-detail.jpg",
+        alt: "Detail of a folded leather clutch",
+        aspect: "landscape" as const,
+      },
     ],
   },
 }
