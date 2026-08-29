@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { TextLink } from "@/components/text-link"
 import { site } from "@/lib/content"
+import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "About",
@@ -13,12 +14,21 @@ type PressPhoto = (typeof site.about.photos)[number]
 function PressPlate({
   photo,
   priority,
+  size = "sm",
 }: {
   photo: PressPhoto
   priority?: boolean
+  size?: "sm" | "md" | "lg"
 }) {
   return (
-    <figure className="mx-auto w-full max-w-[17.5rem] md:mx-0 md:max-w-[19rem]">
+    <figure
+      className={cn(
+        "mx-auto w-full md:mx-0",
+        size === "sm" && "max-w-[17.5rem] md:max-w-[19rem]",
+        size === "md" && "max-w-[22rem] md:max-w-[26rem]",
+        size === "lg" && "max-w-[38rem] md:max-w-[46rem]"
+      )}
+    >
       <div
         className="relative bg-[#ece6d8]"
         style={{ aspectRatio: `${photo.width} / ${photo.height}` }}
@@ -28,7 +38,13 @@ function PressPlate({
           alt={photo.alt}
           fill
           priority={priority}
-          sizes="304px"
+          sizes={
+            size === "lg"
+              ? "(min-width: 768px) 736px, 90vw"
+              : size === "md"
+                ? "(min-width: 768px) 416px, 70vw"
+                : "304px"
+          }
           className="object-contain"
         />
       </div>
@@ -36,6 +52,16 @@ function PressPlate({
         {photo.caption}
       </figcaption>
     </figure>
+  )
+}
+
+function TextSquare({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex min-h-[22rem] w-full max-w-[26rem] items-center bg-[#e6ddd0] p-8 md:min-h-[24rem] md:p-10">
+      <p className="text-[14px] leading-7 text-foreground/90 md:text-[15px] md:leading-8">
+        {children}
+      </p>
+    </div>
   )
 }
 
@@ -56,24 +82,22 @@ export default function AboutPage() {
 
       <div className="mx-auto mt-14 flex max-w-[1100px] flex-col gap-16 px-6 md:mt-20 md:gap-24 md:px-10">
         <section className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-          <p className="max-w-md text-[15px] leading-8 text-foreground/85 md:text-base">
-            {site.about.story}
-          </p>
-          {salon ? <PressPlate photo={salon} priority /> : null}
+          <TextSquare>{site.about.story}</TextSquare>
+          {salon ? <PressPlate photo={salon} size="md" priority /> : null}
         </section>
 
         <section className="grid items-start gap-10 md:grid-cols-2 md:gap-16">
           {bendel ? <PressPlate photo={bendel} /> : null}
-          <div className="max-w-md space-y-6 text-[15px] leading-8 text-foreground/85 md:justify-self-end md:text-base">
+          <div className="flex flex-col gap-8 md:justify-self-end">
             {site.about.lead.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <TextSquare key={paragraph}>{paragraph}</TextSquare>
             ))}
           </div>
         </section>
 
         {times ? (
           <section className="flex justify-center">
-            <PressPlate photo={times} />
+            <PressPlate photo={times} size="lg" />
           </section>
         ) : null}
       </div>
