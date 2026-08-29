@@ -7,7 +7,7 @@ import { site } from "@/lib/content"
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Inquiries, commissions, exhibitions, and collaborations with the studio of Maren Vale.",
+    "Inquiries, commissions, exhibitions, and collaborations with E.D.E Studio.",
 }
 
 export default function ContactPage() {

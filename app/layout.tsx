@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description:
-    "Contemporary paintings and sculptural bags from the Lisbon studio of Maren Vale. Art objects, collections, and crafted editions.",
-  metadataBase: new URL("https://marenvale.studio"),
+    "E.D.E Studio — handmade handbags and studio works. Art objects, collections, and crafted editions.",
+  metadataBase: new URL("https://edestudio.com"),
   openGraph: {
     title: site.name,
     description: site.tagline,
-    images: ["/images/ochre-field.jpg"],
+    images: ["/brand/silhouette.png"],
   },
 }
 

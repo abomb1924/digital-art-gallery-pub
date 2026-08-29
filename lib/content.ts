@@ -29,21 +29,21 @@ export type Bag = {
 }
 
 export const site = {
-  name: "Maren Vale",
-  shortName: "Vale",
-  tagline: "Contemporary works and wearable forms.",
-  location: "Lisbon",
-  email: "studio@marenvale.com",
+  name: "E.D.E Studio",
+  shortName: "E.D.E",
+  tagline: "Handbags, handmade.",
+  location: "Studio",
+  email: "studio@edestudio.com",
   instagram: {
-    handle: "@marenvale",
-    href: "https://instagram.com/marenvale",
+    handle: "@edestudio",
+    href: "https://instagram.com/edestudio",
   },
   about: {
     heading: "About",
     portrait: "/images/studio-portrait.jpg",
     body: [
-      "Maren Vale works between painting and object. In a Lisbon studio overlooking pale plaster and afternoon light, pigment is laid onto linen in slow fields of ochre, bone, and charcoal.",
-      "The bags follow the same language — folded leather, quiet hardware, forms that hold as the paintings hold light. Each piece is considered as an artwork first: a surface, a weight, a presence in a room.",
+      "E.D.E Studio is a practice of handmade handbags and related forms. Each piece is considered as an object first — a surface, a weight, a presence — shaped slowly and in small numbers.",
+      "The work extends into painting and mixed media on linen. Pigment, leather, and cloth share a quiet language of ochre, bone, and charcoal. Nothing is made to shout. Everything is made to be held, worn, or lived with.",
     ],
   },
 }
@@ -167,7 +167,7 @@ export const artworks: Artwork[] = [
     medium: "Oil and mineral pigment on linen",
     dimensions: "145 × 100 cm",
     description:
-      "Oxidized greens and warm rust sit in a mineral field. The palette comes from Lisbon roofs after rain — copper, clay, and the pale of old plaster.",
+      "Oxidized greens and warm rust sit in a mineral field. The palette comes from metal, clay, and the pale of old plaster.",
     image: "/images/copper-silence.jpg",
     details: [],
     aspect: "landscape",
@@ -244,8 +244,8 @@ export const bags: Bag[] = [
 
 export const nav = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
-  { href: "/bags", label: "Bags" },
   { href: "/contact", label: "Contact" },
 ] as const
 
