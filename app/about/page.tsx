@@ -5,7 +5,7 @@ import { site } from "@/lib/content"
 
 export const metadata: Metadata = {
   title: "About",
-  description: site.about.lead[0],
+  description: site.about.story,
 }
 
 type PressPhoto = (typeof site.about.photos)[number]
@@ -41,7 +41,6 @@ function PressPlate({
 
 export default function AboutPage() {
   const [salon, bendel, times] = site.about.photos
-  const [first, second] = site.about.lead
 
   return (
     <div className="pb-24 md:pb-32">
@@ -58,16 +57,18 @@ export default function AboutPage() {
       <div className="mx-auto mt-14 flex max-w-[1100px] flex-col gap-16 px-6 md:mt-20 md:gap-24 md:px-10">
         <section className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <p className="max-w-md text-[15px] leading-8 text-foreground/85 md:text-base">
-            {first}
+            {site.about.story}
           </p>
           {salon ? <PressPlate photo={salon} priority /> : null}
         </section>
 
-        <section className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+        <section className="grid items-start gap-10 md:grid-cols-2 md:gap-16">
           {bendel ? <PressPlate photo={bendel} /> : null}
-          <p className="max-w-md text-[15px] leading-8 text-foreground/85 md:justify-self-end md:text-base">
-            {second}
-          </p>
+          <div className="max-w-md space-y-6 text-[15px] leading-8 text-foreground/85 md:justify-self-end md:text-base">
+            {site.about.lead.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
         </section>
 
         {times ? (
