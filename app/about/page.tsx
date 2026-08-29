@@ -87,19 +87,16 @@ export default function AboutPage() {
         </section>
 
         <section className="grid items-start gap-10 md:grid-cols-2 md:gap-16">
-          {bendel ? <PressPlate photo={bendel} /> : null}
+          <div className="flex flex-col items-center gap-10 md:items-start">
+            {bendel ? <PressPlate photo={bendel} /> : null}
+            {times ? <PressPlate photo={times} size="lg" /> : null}
+          </div>
           <div className="flex flex-col gap-8 md:justify-self-end">
             {site.about.lead.map((paragraph) => (
               <TextSquare key={paragraph}>{paragraph}</TextSquare>
             ))}
           </div>
         </section>
-
-        {times ? (
-          <section className="flex justify-center">
-            <PressPlate photo={times} size="lg" />
-          </section>
-        ) : null}
       </div>
 
       <div className="mt-16 flex flex-wrap justify-center gap-x-8 gap-y-3 md:mt-20">
