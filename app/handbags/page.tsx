@@ -36,11 +36,11 @@ export default function HandbagsPage() {
               </div>
             </div>
             <div className="mt-5 flex items-start justify-between gap-6">
-              <p className="pt-1 font-sans text-[11px] tracking-[0.28em] text-muted-foreground">
+              <p className="shrink-0 pt-1 font-sans text-[11px] tracking-[0.28em] text-muted-foreground">
                 {bag.number}
               </p>
-              <div className="text-right">
-                <p className="font-serif text-xl italic tracking-wide md:text-[1.35rem]">
+              <div className="min-w-0 max-w-[75%] text-right">
+                <p className="font-serif text-lg italic leading-snug tracking-wide md:text-xl">
                   {bag.name}
                 </p>
                 <p className="mt-1 text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
