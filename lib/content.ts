@@ -268,10 +268,91 @@ export const bags: Bag[] = [
   },
 ]
 
+export type Handbag = {
+  number: string
+  slug: string
+  name: string
+  color: string
+  image: string
+}
+
+export const handbags: Handbag[] = [
+  {
+    number: "01",
+    slug: "gypsy-dusty-blue",
+    name: "Gypsy",
+    color: "Dusty blue",
+    image: "/images/handbags/01.jpg",
+  },
+  {
+    number: "02",
+    slug: "ring-black",
+    name: "Ring clutch",
+    color: "Black",
+    image: "/images/handbags/02.jpg",
+  },
+  {
+    number: "03",
+    slug: "hobo-mustard",
+    name: "Hobo",
+    color: "Mustard",
+    image: "/images/handbags/03.jpg",
+  },
+  {
+    number: "04",
+    slug: "flap-black",
+    name: "Flap",
+    color: "Black",
+    image: "/images/handbags/04.jpg",
+  },
+  {
+    number: "05",
+    slug: "hobo-magenta",
+    name: "Hobo",
+    color: "Magenta",
+    image: "/images/handbags/05.jpg",
+  },
+  {
+    number: "06",
+    slug: "applique-periwinkle",
+    name: "Appliqué ring",
+    color: "Periwinkle",
+    image: "/images/handbags/06.jpg",
+  },
+  {
+    number: "07",
+    slug: "cinch-charcoal",
+    name: "Cinch",
+    color: "Charcoal",
+    image: "/images/handbags/07.jpg",
+  },
+  {
+    number: "08",
+    slug: "fold-charcoal",
+    name: "Fold",
+    color: "Charcoal",
+    image: "/images/handbags/08.jpg",
+  },
+  {
+    number: "09",
+    slug: "toggle-black",
+    name: "Toggle",
+    color: "Black",
+    image: "/images/handbags/09.jpg",
+  },
+  {
+    number: "10",
+    slug: "gypsy-bronze",
+    name: "Gypsy",
+    color: "Bronze",
+    image: "/images/handbags/10.jpg",
+  },
+]
+
 export const nav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/work", label: "Work" },
+  { href: "/handbags", label: "Handbags" },
   { href: "/contact", label: "Contact" },
 ] as const
 

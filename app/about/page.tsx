@@ -100,7 +100,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-16 flex flex-wrap justify-center gap-x-8 gap-y-3 md:mt-20">
-        <TextLink href="/work">View the work</TextLink>
+        <TextLink href="/handbags">View the handbags</TextLink>
         <TextLink href="/contact">Inquiries</TextLink>
       </div>
     </div>

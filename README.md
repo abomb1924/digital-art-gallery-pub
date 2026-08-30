@@ -6,10 +6,10 @@ An editorial website for E.D.E Studio — handmade handbags and studio works, pr
 
 - **Home** — the studio mark
 - **About** — a short account of the practice
-- **Work** — paintings and handbags, with a dedicated page for each piece
+- **Handbags** — ten handmade bags, shown with number, name, and color
 - **Contact** — studio email, Instagram, and a short inquiry form
 
-Artwork and bag records live in `lib/content.ts`. Add a new piece by appending to `artworks` or `bags` and placing images in `public/images/`.
+Artwork and bag records live in `lib/content.ts`. Add a new bag by appending to `handbags` and placing an image in `public/images/handbags/`.
 
 ## Run locally
 

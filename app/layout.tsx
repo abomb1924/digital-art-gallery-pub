@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description:
-    "E.D.E Studio — handmade handbags and studio works. Art objects, collections, and crafted editions.",
+    "E.D.E Studio — handmade handbags from New York. Sculptural leather forms, each considered as an object first.",
   metadataBase: new URL("https://edestudio.com"),
   openGraph: {
     title: site.name,
