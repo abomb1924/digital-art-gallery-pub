@@ -91,7 +91,7 @@ export default function AboutPage() {
             {bendel ? <PressPlate photo={bendel} /> : null}
             {times ? <PressPlate photo={times} size="lg" /> : null}
           </div>
-          <div className="flex flex-col gap-8 md:justify-self-end">
+          <div className="flex flex-col gap-3 md:justify-self-end">
             {site.about.lead.map((paragraph) => (
               <TextSquare key={paragraph}>{paragraph}</TextSquare>
             ))}
