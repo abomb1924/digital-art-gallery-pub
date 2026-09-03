@@ -102,6 +102,12 @@ export default function AboutPage() {
       <div className="mt-16 flex flex-wrap justify-center gap-x-8 gap-y-3 md:mt-20">
         <TextLink href="/handbags">View the handbags</TextLink>
         <TextLink href="/contact">Inquiries</TextLink>
+        <a
+          href={`mailto:${site.email}`}
+          className="inline-block text-[11px] tracking-[0.12em] text-foreground/70 underline decoration-foreground/20 underline-offset-[6px] transition-colors duration-300 hover:text-foreground hover:decoration-foreground/60"
+        >
+          {site.email}
+        </a>
       </div>
     </div>
   )

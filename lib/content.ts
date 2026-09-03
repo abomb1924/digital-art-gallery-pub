@@ -33,7 +33,7 @@ export const site = {
   shortName: "E.D.E",
   tagline: "Handbags, handmade.",
   location: "New York",
-  email: "studio@edestudio.com",
+  email: "ellen.edestudio@gmail.com",
   formspree: "https://formspree.io/f/xppzrlde",
   instagram: {
     handle: "@edestudio",
