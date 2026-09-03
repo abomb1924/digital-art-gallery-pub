@@ -34,6 +34,7 @@ export const site = {
   tagline: "Handbags, handmade.",
   location: "New York",
   email: "studio@edestudio.com",
+  formspree: "https://formspree.io/f/xppzrlde",
   instagram: {
     handle: "@edestudio",
     href: "https://instagram.com/edestudio",

@@ -1,15 +1,18 @@
 "use client"
 
-import { useState } from "react"
+import { useActionState } from "react"
+import { submitInquiry, type ContactState } from "@/app/contact/actions"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 
-export function ContactForm() {
-  const [sent, setSent] = useState(false)
+const initialState: ContactState = { ok: false }
 
-  if (sent) {
+export function ContactForm() {
+  const [state, formAction, pending] = useActionState(submitInquiry, initialState)
+
+  if (state.ok) {
     return (
       <p className="max-w-md text-sm leading-7 text-muted-foreground">
         Thank you. A note has been received, and the studio will reply when it
@@ -19,13 +22,7 @@ export function ContactForm() {
   }
 
   return (
-    <form
-      className="flex max-w-md flex-col gap-6"
-      onSubmit={(event) => {
-        event.preventDefault()
-        setSent(true)
-      }}
-    >
+    <form action={formAction} className="flex max-w-md flex-col gap-6">
       <div className="space-y-2">
         <Label
           htmlFor="name"
@@ -38,6 +35,7 @@ export function ContactForm() {
           name="name"
           required
           autoComplete="name"
+          maxLength={200}
           className="h-11 rounded-none border-0 border-b border-border bg-transparent px-0 shadow-none focus-visible:ring-0"
         />
       </div>
@@ -69,16 +67,21 @@ export function ContactForm() {
           name="message"
           required
           rows={5}
+          maxLength={5000}
           className="min-h-28 rounded-none border-0 border-b border-border bg-transparent px-0 shadow-none focus-visible:ring-0"
         />
       </div>
+      {state.error ? (
+        <p className="text-sm leading-6 text-destructive">{state.error}</p>
+      ) : null}
       <div>
         <Button
           type="submit"
           variant="ghost"
+          disabled={pending}
           className="h-auto rounded-none px-0 py-2 text-[11px] tracking-[0.24em] uppercase underline decoration-foreground/25 underline-offset-[6px] hover:bg-transparent hover:decoration-foreground/70"
         >
-          Send
+          {pending ? "Sending" : "Send"}
         </Button>
       </div>
     </form>
